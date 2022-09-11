@@ -46,3 +46,12 @@ for num in range(find_lcm(), min(b)+1):
     if all(num % i == 0 for i in a) and all(i % num == 0 for i in b) is True:
         counter += 1
 print(counter)
+
+# Or for a much more pythonic way 
+# def getTotalX(a, b):
+#     return len([i for i in range(a[-1],b[0]+1) if all(i%j==0 for j in a) and all(k%i == 0 for k in b) ])
+
+
+# a = [2,6]
+# b = [24,36]
+# print(getTotalX(a,b))
