@@ -13,4 +13,4 @@ for index, num in enumerate(list_of_nums): # Gather index and value for each ite
             count += 1 # Tally
             print(num, i)# This prints each pair, mainly for debugging.           
 print(count)
-
+#edit
