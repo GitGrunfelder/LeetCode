@@ -1,4 +1,4 @@
-# from itertools import cycle
+
 from collections import Counter
 import math
 
@@ -35,17 +35,18 @@ def find_commons():
 find_commons()
 # This creates a list of all factors to the power of # of times they appear most in any list.
 def find_lcm():
+    '''Finds lcm from prime factors.'''
     to_the_power = []
     for factor, power in counts.items():
         to_the_power.append(factor ** power)
     lcm = math.prod(to_the_power) # math function gives product of new list.
     return lcm
 
-counter = 0
+COUNTER = 0
 for num in range(find_lcm(), min(b)+1):
     if all(num % i == 0 for i in a) and all(i % num == 0 for i in b) is True:
-        counter += 1
-print(counter)
+        COUNTER += 1
+print(COUNTER)
 
 # Or for a much more pythonic way 
 # def getTotalX(a, b):
